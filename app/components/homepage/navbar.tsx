@@ -1,12 +1,12 @@
+"use client";
 import { useState } from "react";
-// import MenuSvg from "../svgs/logos/menu-svg";
-// import XIconsvg from "../svgs/logos/x-svg";
 import NavLogo from "../svg/logos/logo-svg";
 import CloseSvg from "../svg/icons/close-svg";
 import MenuSvg from "../svg/icons/menu-svg";
 import HeartSvg from "../svg/icons/heart-svg";
 import ProfileSvg from "../svg/icons/profile-svg";
 import CartSvg from "../svg/icons/cart-svg";
+import Link from "next/link";
 
 const NavLinks = ["Home", "Shop", "Services", "Contact Us"];
 const NavIcons = [
@@ -39,12 +39,12 @@ export default function Navbar() {
             <ul className="hidden md:flex gap-10">
               {NavLinks.map((link, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     href="#"
                     className="hover:text-primary pb-1 flex hover:border-b transition-all duration-150 ease-in-out items-center justify-center gap-3 font-medium text-xs uppercase"
                   >
                     <span>{link}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -64,12 +64,12 @@ export default function Navbar() {
           <ul className="hidden md:flex gap-4">
             {NavIcons.map((link) => (
               <li key={link.id}>
-                <a
+                <Link
                   href="#"
                   className="hover:text-primary  transition duration-300 ease-in-out"
                 >
                   <span>{link.icon}</span>
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -84,23 +84,23 @@ export default function Navbar() {
         <ul className="flex flex-col pl-8 gap-10 justify-between">
           {NavLinks.map((link, index) => (
             <li key={index}>
-              <a
+              <Link
                 href="#"
                 className="mb-1.5 hover:underline pb-1 font-semibold uppercase hover:text-inverted transition duration-300 ease-in-out"
               >
                 {link}
-              </a>
+              </Link>
             </li>
           ))}
           <div className="flex gap-4">
             {NavIcons.map((link) => (
               <li key={link.id}>
-                <a
+                <Link
                   href="#"
                   className="hover:text-primary  transition duration-300 ease-in-out"
                 >
                   {link.icon}
-                </a>
+                </Link>
               </li>
             ))}
           </div>

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export default function CloseSvg({ className }) {
+export default function CloseSvg({ className }: { className: string }) {
   return (
     <svg
       className={className}

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export default function MenuSvg({ className }) {
+export default function MenuSvg({ className }: { className: string }) {
   return (
     <svg
       className={className}

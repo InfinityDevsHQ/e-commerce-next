@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Heading from "./heading";
 
 const CollectionItems = [
@@ -34,7 +35,9 @@ export default function Collection() {
             Lorem ipsum dolor sit amet consectetur. Orci volutpat pharetra at
             curabitor nec magnis
           </p>
-          <img
+          <Image
+            width={450}
+            height={300}
             src="/collection-sofa.png"
             alt="Yellow Sofa"
             className="w-3/4 absolute bottom-0 right-0"
@@ -47,7 +50,13 @@ export default function Collection() {
               Lorem ipsum dolor sit amet consectetur.
             </p>
             <div className="flex justify-end items-end">
-              <img src={item.image} alt={item.title} className="lg:w-1/2" />
+              <Image
+                width={150}
+                height={100}
+                src={item.image}
+                alt={item.title}
+                className="lg:w-1/2"
+              />
             </div>
           </div>
         ))}

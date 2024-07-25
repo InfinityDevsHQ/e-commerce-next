@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SendIcon from "../svg/icons/send-icon";
 
 export default function Newsletter() {
@@ -18,14 +19,14 @@ export default function Newsletter() {
           placeholder="Enter email to Subscribe to newsletter"
           className="w-full py-3 px-4 rounded-full bg-primary focus:outline-none focus:ring-2 focus:ring-black/40"
         />
-        <a
+        <Link
           href="/"
           className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400"
         >
           <span className="mx-4 md:mx-7">
             <SendIcon />
           </span>
-        </a>
+        </Link>
       </div>
     </div>
   );

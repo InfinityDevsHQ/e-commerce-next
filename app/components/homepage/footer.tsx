@@ -1,3 +1,4 @@
+import Link from "next/link";
 import ChevronRight from "../svg/icons/chevron-right";
 import NavLogoDark from "../svg/logos/logo-svg-dark";
 
@@ -19,10 +20,10 @@ const Footer = () => {
               {["Privacy Policy", "Return Policy", "Disputes", "Return"].map(
                 (link, index) => (
                   <li key={index}>
-                    <a href="#" className="flex items-center gap-1 pb-1">
+                    <Link href="/" className="flex items-center gap-1 pb-1">
                       <ChevronRight />
                       {link}
-                    </a>
+                    </Link>
                   </li>
                 )
               )}
@@ -35,10 +36,10 @@ const Footer = () => {
               {["Home", "Shop", "My account", "Track Order"].map(
                 (link, index) => (
                   <li key={index}>
-                    <a href="#" className="flex items-center gap-1 pb-1">
+                    <Link href="/" className="flex items-center gap-1 pb-1">
                       <ChevronRight />
                       {link}
-                    </a>
+                    </Link>
                   </li>
                 )
               )}
@@ -50,10 +51,10 @@ const Footer = () => {
             <ul className="space-y-2">
               {["Bed", "Table", "Sofa", "Lamp"].map((link, index) => (
                 <li key={index}>
-                  <a href="#" className="flex items-center gap-1 pb-1">
+                  <Link href="/" className="flex items-center gap-1 pb-1">
                     <ChevronRight />
                     {link}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <div className="text-primary">
@@ -14,12 +16,12 @@ export default function Hero() {
           semper est odio sed nisl cras a arcu tellus. Et duis eu dolor augue
           imperdiet eget leo interdum feugiat.
         </p>
-        <a
+        <Link
           href="/"
           className="bg-secondary font-bold mt-4 md:mt-0 uppercase px-4 py-2 text-lg hover:bg-secondary/90 transition duration-300 ease-in-out"
         >
           Shop Now
-        </a>
+        </Link>
       </div>
     </div>
   );
