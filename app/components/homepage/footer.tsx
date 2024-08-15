@@ -13,7 +13,7 @@ const Footer = () => {
 
           <div className="space-y-2.5">
             <h4 className="font-bold text-base md:text-xl">Quick Links</h4>
-            <ul className="">
+            <ul>
               {["Privacy Policy", "Return Policy", "Disputes", "FAQs"].map(
                 (link, index) => (
                   <li key={index}>
@@ -32,7 +32,7 @@ const Footer = () => {
 
           <div className="space-y-2.5">
             <h4 className="font-bold text-base md:text-xl">Menu</h4>
-            <ul className="">
+            <ul>
               {["Home", "Shop", "My account", "Track Order"].map(
                 (link, index) => (
                   <li key={index}>
@@ -51,7 +51,7 @@ const Footer = () => {
 
           <div className="space-y-2.5 w-28">
             <h4 className="font-bold text-base md:text-xl">Shop</h4>
-            <ul className="">
+            <ul>
               {["Bed", "Table", "Sofa", "Lamp"].map((link, index) => (
                 <li key={index}>
                   <Link

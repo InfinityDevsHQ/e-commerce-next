@@ -28,7 +28,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <header className="text-primary bg-backgroundPrimary overflow-hidden">
-      <div className="px-4 py-4 md:py-8 max-w-7xl mx-auto">
+      <div className="px-4 py-4 md:px-14 md:py-6">
         <div className="mx-auto flex justify-between items-center">
           {/* logo  */}
           <div className="text-2xl font-bold">
@@ -36,12 +36,12 @@ export default function Navbar() {
           </div>
           {/* Desktop */}
           <nav>
-            <ul className="hidden md:flex gap-10">
+            <ul className="hidden md:flex gap-2.5">
               {NavLinks.map((link, index) => (
                 <li key={index}>
                   <Link
                     href="#"
-                    className="hover:text-primary pb-1 flex hover:border-b transition-all duration-150 ease-in-out items-center justify-center gap-3 font-medium text-xs uppercase"
+                    className="hover:text-white pb-1 md:p-2.5 flex hover:border-b transition-all duration-150 ease-in-out items-center justify-center gap-3 font-bold text-xs uppercase"
                   >
                     <span>{link}</span>
                   </Link>
@@ -53,20 +53,16 @@ export default function Navbar() {
               type="button"
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? (
-                <CloseSvg className="size-5" />
-              ) : (
-                <MenuSvg className="size-5" />
-              )}
+              {!isOpen && <MenuSvg className="size-5" />}
             </button>
           </nav>
 
-          <ul className="hidden md:flex gap-4">
+          <ul className="hidden md:flex gap-2.5">
             {NavIcons.map((link) => (
               <li key={link.id}>
                 <Link
                   href="#"
-                  className="hover:text-primary  transition duration-300 ease-in-out"
+                  className="hover:text-white transition duration-300 ease-in-out"
                 >
                   <span>{link.icon}</span>
                 </Link>
@@ -77,34 +73,47 @@ export default function Navbar() {
       </div>
       {/* Mobile Nav */}
       <div
-        className={`w-full pt-6 py-8 bg-black/80 h-dvh ${
-          isOpen ? "absolute" : "hidden"
+        className={`w-full pt-6 py-8 bg-black/80 h-dvh z-10 -mt-20 md:hidden ${
+          isOpen ? "fixed" : "hidden"
         }`}
       >
-        <ul className="flex flex-col pl-8 gap-10 justify-between">
-          {NavLinks.map((link, index) => (
-            <li key={index}>
-              <Link
-                href="#"
-                className="mb-1.5 hover:underline pb-1 font-semibold uppercase hover:text-inverted transition duration-300 ease-in-out"
-              >
-                {link}
-              </Link>
-            </li>
-          ))}
-          <div className="flex gap-4">
-            {NavIcons.map((link) => (
-              <li key={link.id}>
+        <div className="flex justify-between items-start px-8">
+          <ul className="flex flex-col pt-20 gap-16 justify-between">
+            {NavLinks.map((link, index) => (
+              <li key={index}>
                 <Link
                   href="#"
-                  className="hover:text-primary  transition duration-300 ease-in-out"
+                  className="mb-1.5 hover:underline pb-1 font-semibold uppercase hover:text-inverted transition duration-300 ease-in-out"
                 >
-                  {link.icon}
+                  {link}
                 </Link>
               </li>
             ))}
-          </div>
-        </ul>
+            <div className="flex gap-4">
+              {NavIcons.map((link) => (
+                <li key={link.id}>
+                  <Link
+                    href="#"
+                    className="hover:text-primary  transition duration-300 ease-in-out"
+                  >
+                    {link.icon}
+                  </Link>
+                </li>
+              ))}
+            </div>
+          </ul>
+          <button
+            className="mt-5 md:mt-0 md:hidden"
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? (
+              <CloseSvg className="size-5" />
+            ) : (
+              <MenuSvg className="size-5" />
+            )}
+          </button>
+        </div>
       </div>
     </header>
   );

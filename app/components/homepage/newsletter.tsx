@@ -22,7 +22,7 @@ export default function Newsletter() {
           type="submit"
           className="absolute right-5 top-1/2 transform -translate-y-1/2 text-gray-400"
         >
-          <span className="">
+          <span>
             <SendIcon />
           </span>
         </button>
