@@ -12,7 +12,7 @@ export default function BestSelling() {
   });
 
   return (
-    <div className="bg-white text-dark px-4 py-12 md:p-12">
+    <div className="bg-white text-dark px-4 py-12 md:p-12" id="services">
       <Heading>Best Selling Products</Heading>
       <div className="flex gap-2.5 mb-4 md:mb-8 lg:mb-12">
         {["ALL", "BED", "SOFA", "TABLE"].map((filter) => (
@@ -68,7 +68,7 @@ export default function BestSelling() {
         ))}
       </div>
 
-      <div className="text-end">
+      <div className="text-center">
         <Link
           href="/"
           className="bg-secondary mb-2 p-1.5 md:p-2.5 text-white font-bold text-xs hover:bg-secondary/90"

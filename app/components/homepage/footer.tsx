@@ -7,9 +7,12 @@ const Footer = () => {
     <footer>
       <div className="bg-primary text-black sm:px-6 md:px-12 py-12">
         <div className="grid grid-cols-3 md:grid-cols-4 md:gap-4 lg:gap-12  justify-items-center md:justify-items-start md:items-center space-y-4 md:space-y-0 px-4">
-          <div className="fill-black mb-4 md:mb-0 col-span-3 md:col-span-1">
+          <Link
+            href="#home"
+            className="fill-black mb-4 md:mb-0 col-span-3 md:col-span-1"
+          >
             <NavLogoDark />
-          </div>
+          </Link>
 
           <div className="space-y-2.5">
             <h4 className="font-bold text-base md:text-xl">Quick Links</h4>

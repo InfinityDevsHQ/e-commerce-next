@@ -2,7 +2,7 @@ import SendIcon from "../svg/icons/send-icon";
 
 export default function Newsletter() {
   return (
-    <div className="bg-white px-4 py-12 sm:p-8 md:p-12">
+    <div className="bg-white px-4 py-12 sm:p-8 md:p-12" id="contact">
       <h2 className="text-3xl font-bold uppercase text-center text-dark">
         KEEP UPDATED & GET UNLIMITED DISCOUNT
       </h2>

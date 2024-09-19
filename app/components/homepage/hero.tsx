@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <div className="text-primary">
+    <div className="text-primary" id="home">
       <div className="flex flex-col items-center gap-2 md:gap-5 px-4 py-16 sm:py-24 md:px-14 md:py-14 lg:p-24">
         <h4 className="font-bold uppercase tracking-wider md:tracking-[0.5em]">
           Exclusive Furniture

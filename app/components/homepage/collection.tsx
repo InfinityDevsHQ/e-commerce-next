@@ -26,7 +26,7 @@ const CollectionItems = [
 
 export default function Collection() {
   return (
-    <div className="bg-white px-4 py-12 md:p-12">
+    <div className="bg-white px-4 py-12 md:p-12" id="shop">
       <Heading>OUR COLLECTION</Heading>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-2.5">
         <div className="col-span-2 row-span-2 p-3 md:p-5 bg-dark relative h-80 sm:h-96 lg:h-[427px]">
@@ -36,11 +36,12 @@ export default function Collection() {
             curabitor nec magnis
           </p>
           <Image
-            width={427}
-            height={293}
+            width={1000}
+            height={1000}
+            quality={100}
             src="/collection-sofa.png"
             alt="Yellow Sofa"
-            className="absolute bottom-0 right-0 lg:w-[427px] lg:h-[293px]"
+            className="absolute bottom-0 right-0 w-72 sm:w-[427px] sm:h-[293px]"
           />
         </div>
         {CollectionItems.map((item) => (
